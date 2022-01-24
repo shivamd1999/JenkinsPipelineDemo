@@ -2,15 +2,9 @@ pipeline {
     agent any
 
     stages {
-        
         stage('Hello') {
             steps {
-                echo 'Hello World'
-            }
-        }
-        stage('Buid') {
-            steps {
-                echo 'Building'
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/shivamd1999/Sample_Projects.git']]])
             }
         }
         stage('Deploy') {
