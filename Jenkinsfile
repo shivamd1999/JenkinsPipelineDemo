@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello World'
+                bat "D:\hello.bat\Sample_Project_bat"
             }
         }
         stages {
@@ -12,7 +12,8 @@ pipeline {
             steps {
                 echo 'test World'
             }
-        }stages {
+        }
+            stages {
         stage('build') {
             steps {
                 echo 'build World'
