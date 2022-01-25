@@ -7,9 +7,9 @@ pipeline {
                 bat "python hello1.py"
             }
         }
-        stage('Hello') {
+        stage('batch') {
             steps {
-                echo 'Hello '
+                bat " batch hello.bat"
             }
         }
         stage('build') {
