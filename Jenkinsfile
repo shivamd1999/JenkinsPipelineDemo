@@ -2,25 +2,25 @@ pipeline {
     agent any
 
     stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stages {
+        stage('test') {
+            steps {
+                echo 'test World'
+            }
+        }stages {
         stage('build') {
             steps {
-               sh 'python hello.py'
-                
+                echo 'build World'
             }
-        }
-        stage('Deploy') {
+        }stages {
+        stage('deploy') {
             steps {
-                echo 'Deploying'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing'
-            }
-        }
-        stage('Release') {
-            steps {
-                echo 'Releasing'
+                echo 'deploy World'
             }
         }
     }
