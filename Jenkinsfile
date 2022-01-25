@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
-            steps {
-                bat "D:\hello.bat\Sample_Project_bat"
+        stage('build') {
+            dir("build_folder"){
+                bat "run_build_window.bat"
             }
         }
     }
