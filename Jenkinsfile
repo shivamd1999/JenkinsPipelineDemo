@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('hello') {
             steps {
-               sh 'python --version'
+               echo 'python hello.py'
                 
             }
         }
