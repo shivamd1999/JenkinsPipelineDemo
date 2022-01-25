@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('hello') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/shivamd1999/Sample_Projects.git']]])
+               sh 'python --version'
+                
             }
         }
         stage('Deploy') {
