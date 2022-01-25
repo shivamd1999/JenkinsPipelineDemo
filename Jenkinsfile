@@ -9,7 +9,7 @@ pipeline {
         }
         stage('batch') {
             steps {
-                bat "hello.bat"
+                sh "hello.bat"
             }
         }
         stage('build') {
