@@ -2,9 +2,19 @@ pipeline {
     agent any
 
     stages {
+        stage('Python') {
+            steps {
+                bat "python hello.py"
+            }
+        }
+        stage('Hello') {
+            steps {
+                echo 'Hello '
+            }
+        }
         stage('build') {
-            dir("build_folder"){
-                bat "run_build_window.bat"
+            steps {
+                echo ' World'
             }
         }
     }
