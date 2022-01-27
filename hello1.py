@@ -1,4 +1,4 @@
 import os 
-for filenames in os.walk('D:\projects'):
+for filenames in os.listdir(r'D:\projects'):
   print('files:',filenames)
   print()
