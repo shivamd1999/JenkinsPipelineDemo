@@ -8,11 +8,11 @@ os.chdir(path)
 
 for root,directories,files in os.walk(path,topdown=False): 
     for name in files:
-        t = os.stat(os.path.join(root, name))[18] 
+        t = os.stat(os.path.join(root, name))[8] 
         filetime = datetime.datetime.fromtimestamp(t) - today
 
 
-        if filetime.days <= -18:
+        if filetime.days <= -17:
             print(os.path.join(root, name), filetime.days)
             os.remove(os.path.join(root, name))
 
