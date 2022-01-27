@@ -1,7 +1,7 @@
 import os 
 import datetime
 import glob
-path = 'enter_path_here'
+path = 'D:\projects'
 
 today = datetime.datetime.today()
 os.chdir(path)
