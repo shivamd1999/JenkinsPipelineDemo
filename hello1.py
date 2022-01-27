@@ -16,6 +16,6 @@ for root,directories,files in os.walk(path,topdown=False):
 
         #checking if file is more than 7 days old 
         #or not if yes then remove them
-        if filetime.days <= -80:
+        if filetime.days <= -8:
             print(os.path.join(root, name), filetime.days)
             os.remove(os.path.join(root, name))
