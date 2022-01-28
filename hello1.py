@@ -22,13 +22,15 @@ for dirpath,dirnames,filenames in os.walk(path):
 
 import os
 import zipfile
+    
 def zipdir(path, ziph):
     # ziph is zipfile handle
     for root, dirs, files in os.walk(path):
-        print("Following fies will be zipped")
         for file in files:
-            ziph.write(os.path.join(root, file))
-            print(file)
-zipf = zipfile.ZipFile('Zipped_file.zip', 'w', zipfile.ZIP_DEFLATED)
-zipdir('D:\hello', zipf)
+            ziph.write(os.path.join(root, file), 
+                       os.path.relpath(os.path.join(root, file), 
+                                       os.path.join(path, 'D:\hello')))
+      
+zipf = zipfile.ZipFile('Python2.zip', 'w', zipfile.ZIP_DEFLATED)
+zipdir('tmp/', zipf)
 zipf.close()
