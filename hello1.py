@@ -1,6 +1,5 @@
 import os 
 import datetime
-import ZipFile
 path = 'D:\projects'
 
 today = datetime.datetime.today()
@@ -23,7 +22,7 @@ for dirpath,dirnames,filenames in os.walk(path):
     print("The Remaining files are:",filenames)
     
 
-  
+import ZipFile
 # specifying the zip file name
 file_name = "D:\projects"
   
