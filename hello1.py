@@ -34,5 +34,6 @@ def zip_files():
 	with ZipFile(ZIPPED_FILE_DIR / "my_zip.zip", "w") as zip:
 		for folder in folder_list:
 			zip.write(folder)
-			zip_files()
+
+zip_files()
 
