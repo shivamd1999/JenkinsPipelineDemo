@@ -4,8 +4,8 @@ path = 'D:\fliker'
 os.chdir(path)
 files = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
 
-oldest = file[0]
-newest = files[-1]
+Oldest = file[0]
+Newest = files[-1]
 
 print "Oldest:", oldest
 print "Newest:", newest
