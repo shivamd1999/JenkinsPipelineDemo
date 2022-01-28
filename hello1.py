@@ -1,35 +1,38 @@
-# Import libraries
-import os
-import time
-
-# Insert the directory path in here
+import os 
+import datetime
+import glob
 path = 'D:\hello'
 
-# Extracting all the contents in the directory corresponding to path
-l_files = os.listdir(path)
+today = datetime.datetime.today()
+os.chdir(path)
 
-# Iterating over all the files
-for file in l_files:
+for root,directories,files in os.walk(path,topdown=False): 
+    for name in files:
+        t = os.stat(os.path.join(root, name))[8]
+        filetime = datetime.datetime.fromtimestamp(t) - today
 
-# Instantiating the path of the file
-	file_path = f'D:\hello'
 
-	# Checking whether the given file is a directory or not
-	if os.path.isfile(file_path):
-		try:
-			# Printing the file pertaining to file_path
-			os.startfile(file_path, 'print')
-			print(f'Printing {file}')
+        if filetime.days <= -18:
+            print(os.path.join(root, name), filetime.days)
+            os.remove(os.path.join(root, name))
+            
+ 
+for dirpath,dirnames,filenames in os.walk(path):
+    print("current path",dirpath)
+    print("current directories",dirnames)
+    print("The Remaining files are:",filenames)
 
-			# Sleeping the program for 5 seconds so as to account the
-	# steady processing of the print operation.
-			time.sleep(5)
-		except:
-			# Catching if any error occurs and alerting the user
-			print(f'ALERT: {file} could not be printed! Please check\
-			the associated softwares, or the file type.')
-	else:
-		print(f'ALERT: {file} is not a file, so can not be printed!')
-		
-print('Task finished!')
+import os
+from pathlib import Path
+from zipfile import ZipFile
+DOWNLOAD_DIR = Path("D:\hello")
+ZIPPED_FILE_DIR = Path("D:\hello")
+def get_list_of_all_folders(download_dir: Path):
+	return [f for f in download_dir.iterdir() if download_dir.is_dir()]
+def zip_files():
+	folder_list = get_list_of_all_folders(DOWNLOAD_DIR)
+	with ZipFile(ZIPPED_FILE_DIR / "my_zip.zip", "w") as zip:
+		for folder in folder_list:
+			zip.write(folder)
+			zip_files()
 
