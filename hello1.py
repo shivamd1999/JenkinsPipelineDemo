@@ -1,6 +1,6 @@
 import os 
 
-path = ''
+path = 'D:\fliker'
 os.chdir(path)
 files = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
 
@@ -14,8 +14,8 @@ print "All by modified oldest to newest:",files
 import os
 from pathlib import Path
 from zipfile import ZipFile
-DOWNLOAD_DIR = Path("D:\shivam")
-ZIPPED_FILE_DIR = Path("D:\shivam")
+DOWNLOAD_DIR = Path("D:\fliker")
+ZIPPED_FILE_DIR = Path("D:\fliker")
 def get_list_of_all_folders(download_dir: Path):
 	return [f for f in download_dir.iterdir() if download_dir.is_dir()]
 def zip_files():
