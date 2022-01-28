@@ -1,10 +1,13 @@
 import glob
-import os
+import os.path
 
-files_path = os.path.join(folder, 'D:\fliker')
-files = sorted(
-    glob.iglob(files_path), key=os.path.getctime, reverse=True) 
-print files[0]
+folder_path = r'D:\fliker'
+file_type = 'D:\fliker'
+files = glob.glob(folder_path + file_type)
+max_file = max(files, key=os.path.getctime)
+
+print (max_file)
+
 import os
 from pathlib import Path
 from zipfile import ZipFile
