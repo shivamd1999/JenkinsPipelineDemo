@@ -21,17 +21,22 @@ for dirpath,dirnames,filenames in os.walk(path):
     print("current directories",dirnames)
     print("The Remaining files are:",filenames)
     
+import os
+import shutil
+from zipfile import ZipFile
+from os import path
+from shutil import make_archive
 
-import ZipFile
-# specifying the zip file name
-file_name = "D:\projects"
-  
-# opening the zip file in READ mode
-with ZipFile(file_name, 'r') as zip:
-    # printing all the contents of the zip file
-    zip.printdir()
-  
-    # extracting all the files
-    print('Extracting all the files now...')
-    zip.extractall()
-    print('Done!')
+    # Check if file exists
+       if path.exists("D:\projects"):
+    # get the path to the file in the current directory
+        src = path.realpath("D:\projects");
+    # rename the original file
+        os.rename("career.guru99.txt","D:\projects")
+    # now put things into a ZIP archive
+        root_dir,tail = path.split(src)
+        shutil.make_archive("guru99 archive","zip",root_dir)
+    # more fine-grained control over ZIP files
+        with ZipFile("D:\projects", "w") as newzip:
+            newzip.write("D:\projects")
+            newzip.write("D:\projects")
