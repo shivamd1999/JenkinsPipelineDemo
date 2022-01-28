@@ -4,7 +4,7 @@ date_file_list = []
 for folder in glob.glob(root):
     print('folder =', folder)
     
-    for file in glob.glob(folder + '/*.*'):
+    for file in glob.glob(folder + 'D:\fliker'):
        
         stats = os.stat(file)
         
