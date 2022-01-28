@@ -1,26 +1,15 @@
 import os 
-import datetime
-import glob
-path = 'D:\shivam'
 
-today = datetime.datetime.today()
+path = ''
 os.chdir(path)
+files = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
 
-for root,directories,files in os.walk(path,topdown=False): 
-    for name in files:
-        t = os.stat(os.path.join(root, name))[8]
-        filetime = datetime.datetime.fromtimestamp(t) - today
+oldest = file[0]
+newest = files[5]
 
-
-        if filetime.days <= -18:
-            print(os.path.join(root, name), filetime.days)
-            os.remove(os.path.join(root, name))
-            
- 
-for dirpath,dirnames,filenames in os.walk(path):
-    print("current path",dirpath)
-    print("current directories",dirnames)
-    print("The Remaining files are:",filenames)
+print "Oldest:", oldest
+print "Newest:", newest
+print "All by modified oldest to newest:",files
 
 import os
 from pathlib import Path
