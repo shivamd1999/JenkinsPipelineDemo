@@ -17,6 +17,6 @@ for root,directories,files in os.walk(path,topdown=False):
             
 import zipfile
 target = 'D:\hello'
-handle = zipfile.Zipfile('D:\project','w')
+handle = zipfile.ZipFile('D:\project','w')
 handle.write(target, compress_type = zipfile.ZIP_DEFLATED)
 handle.close()
