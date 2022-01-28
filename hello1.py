@@ -31,6 +31,6 @@ def zipdir(path, ziph):
                        os.path.relpath(os.path.join(root, file), 
                                        os.path.join(path, 'D:\hello')))
       
-zipf = zipfile.ZipFile('Python.zip', 'w', zipfile.ZIP_DEFLATED)
+zipf = zipfile.ZipFile('Python1.zip', 'w', zipfile.ZIP_DEFLATED)
 zipdir('tmp/', zipf)
 zipf.close()
