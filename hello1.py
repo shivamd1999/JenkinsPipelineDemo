@@ -1,6 +1,5 @@
 import os 
 import datetime
-from zipfile
 import ZipFile
 path = 'D:\projects'
 
