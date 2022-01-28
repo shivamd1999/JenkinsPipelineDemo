@@ -12,7 +12,7 @@ l_files = os.listdir(path)
 for file in l_files:
 
 # Instantiating the path of the file
-	file_path = f'D:\hello}'
+	file_path = f'D:\hello'
 
 	# Checking whether the given file is a directory or not
 	if os.path.isfile(file_path):
