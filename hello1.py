@@ -1,25 +1,20 @@
 import glob
-import os.path
 
-folder_path = r'D:\fliker'
-file_type = 'D:\fliker'
-files = glob.glob(folder_path + file_type)
-max_file = max(files, key=os.path.getctime)
+# This is my path
+path="D:\fliker"
 
-print (max_file)
+# Using '*' pattern
+print('\nNamed with wildcard *:')
+for files in glob.glob(path + '*'):
+	print(files)
 
-import os
-from pathlib import Path
-from zipfile import ZipFile
-DOWNLOAD_DIR = Path("D:\fliker")
-ZIPPED_FILE_DIR = Path("D:\fliker")
-def get_list_of_all_folders(download_dir: Path):
-	return [f for f in download_dir.iterdir() if download_dir.is_dir()]
-def zip_files():
-	folder_list = get_list_of_all_folders(DOWNLOAD_DIR)
-	with ZipFile(ZIPPED_FILE_DIR / "my_zip.zip", "w") as zip:
-		for folder in folder_list:
-			zip.write(folder)
+# Using '?' pattern
+print('\nNamed with wildcard ?:')
+for files in glob.glob(path + '?.txt'):
+	print(files)
 
-zip_files()
 
+# Using [0-9] pattern
+print('\nNamed with wildcard ranges:')
+for files in glob.glob(path + '/*[0-9].*'):
+	print(files)
