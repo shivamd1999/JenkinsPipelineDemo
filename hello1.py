@@ -5,6 +5,7 @@ path = 'D:\jyjyjyj'
 os.chdir(path)
 files = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
 latest = (files[-1],files[-2],files[-3],files[-4],files[-5])
+os.remove(files)
 
 print("Latest:", latest)
 
