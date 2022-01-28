@@ -1,20 +1,8 @@
 import glob
+import os
 
-# This is my path
-path="D:\fliker"
-
-# Using '*' pattern
-print('\nNamed with wildcard *:')
-for files in glob.glob(path + '*'):
-	print(files)
-
-# Using '?' pattern
-print('\nNamed with wildcard ?:')
-for files in glob.glob(path + '?.txt'):
-	print(files)
-
-
-# Using [0-9] pattern
-print('\nNamed with wildcard ranges:')
-for files in glob.glob(path + '/*[0-9].*'):
-	print(files)
+folder_path = "D:\fliker"
+files_path = os.path.join(folder_path, 'D:\fliker')
+files = sorted(glob.iglob(files_path), key=os.path.getctime, reverse=True)
+print (files[0])
+print (files[0],files[1])
