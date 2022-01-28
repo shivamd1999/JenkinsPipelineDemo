@@ -1,7 +1,7 @@
 import os 
 import datetime
 import glob
-path = 'D:\hello'
+path = 'D:\shivam'
 
 today = datetime.datetime.today()
 os.chdir(path)
@@ -25,8 +25,8 @@ for dirpath,dirnames,filenames in os.walk(path):
 import os
 from pathlib import Path
 from zipfile import ZipFile
-DOWNLOAD_DIR = Path("D:\hello")
-ZIPPED_FILE_DIR = Path("D:\hello")
+DOWNLOAD_DIR = Path("D:\shivam")
+ZIPPED_FILE_DIR = Path("D:\shivam")
 def get_list_of_all_folders(download_dir: Path):
 	return [f for f in download_dir.iterdir() if download_dir.is_dir()]
 def zip_files():
