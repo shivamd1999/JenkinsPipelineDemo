@@ -2,7 +2,7 @@ import os, glob, time
 root = 'D:\fliker'
 date_file_list = []
 for folder in glob.glob(root):
-    print "folder =", folder
+    print('folder =', folder)
     
     for file in glob.glob(folder + '/*.*'):
        
@@ -16,10 +16,10 @@ for folder in glob.glob(root):
 
 date_file_list.sort()
 date_file_list.reverse() 
-print "%-40s %s" % ("filename:", "last modified:")
+print("%-40s %s" % ("filename:", "last modified:"))
 for file in date_file_list:
    
     folder, file_name = os.path.split(file[1])
    
     file_date = time.strftime("%m/%d/%y %H:%M:%S", file[0])
-    print "%-40s %s" % (file_name, file_date)
+    print("%-40s %s" % (file_name, file_date))
