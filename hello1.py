@@ -4,9 +4,9 @@ import time
 path = 'D:\jyjyjyj'
 os.chdir(path)
 files = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
-newest = (files[-1],files[-2],files[-3],files[-4],files[-5])
+latest = (files[-1],files[-2],files[-3],files[-4],files[-5])
 
-print("Newest:", newest)
+print("Latest:", latest)
 
 import os
 from pathlib import Path
