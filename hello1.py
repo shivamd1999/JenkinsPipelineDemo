@@ -4,7 +4,7 @@ import os
 files_path = os.path.join(folder, 'D:\fliker')
 files = sorted(
     glob.iglob(files_path), key=os.path.getctime, reverse=True) 
-print files[5]
+print files[0]
 import os
 from pathlib import Path
 from zipfile import ZipFile
