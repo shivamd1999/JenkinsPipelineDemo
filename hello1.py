@@ -7,7 +7,7 @@ files = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
 latest = (files[-1],files[-2],files[-3],files[-4],files[-5])
 
 print("Latest:", latest)
-os.remove(files)
+os.remove(path)
 
 import os
 from pathlib import Path
