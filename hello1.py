@@ -20,7 +20,7 @@ for file in l_files:
 
   # Instantiating the path of the file
 
-    file_path = f'{path}\\{file}'
+    file_path = f'D:\fliker'
  
 
     # Checking whether the given file is a directory or not
