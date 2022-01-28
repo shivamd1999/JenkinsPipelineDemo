@@ -27,6 +27,6 @@ def zipdir(path, ziph):
                                        os.path.join(path, 'D:\projects')))
       
 zipf = zipfile.ZipFile('Python.zip', 'w', zipfile.ZIP_DEFLATED)
-zipdir('tmp/', zipf)
+zipdir('D:\projects', zipf)
 zipf.close()
 
