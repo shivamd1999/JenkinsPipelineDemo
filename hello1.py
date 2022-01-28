@@ -46,9 +46,7 @@ for file in l_files:
 
             # Catching if any error occurs and alerting the user
 
-            print(f'ALERT: {file} could not be printed! Please check\
-
-            the associated softwares, or the file type.')
+            print(f'ALERT: {file} could not be printed! Please check\the associated softwares, or the file type.')
 
     else:
 
