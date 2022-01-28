@@ -29,4 +29,5 @@ def zipdir(path, ziph):
 zipf = zipfile.ZipFile('Python.zip', 'w', zipfile.ZIP_DEFLATED)
 zipdir('tmp/', zipf)
 zipf.close()
+print(dir(zipf))
             
