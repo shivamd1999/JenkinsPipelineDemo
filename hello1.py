@@ -1,15 +1,12 @@
 import os
 import time
 
-if os.path.exists("D:\jyjyjyj"):
-	files = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
-	latest = (files[-1],files[-2],files[-3],files[-4],files[-5])
-	
-	print("Latest:", latest)
-	
-else:
-	os.remove("D:\jyjyjyj")
-  
+path = 'D:\jyjyjyj'
+os.chdir(path)
+files = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
+latest = (files[-1],files[-2],files[-3],files[-4],files[-5])
+
+print("Latest:", latest)
 
 import os
 from pathlib import Path
@@ -25,4 +22,3 @@ def zip_files():
 			zip.write(folder)
 
 zip_files()
-
