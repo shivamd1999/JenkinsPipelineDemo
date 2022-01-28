@@ -6,7 +6,7 @@ if os.path.exists("D:\jyjyjyj"):
 	latest = (files[-1],files[-2],files[-3],files[-4],files[-5])
 	
 	print("Latest:", latest)
-	os.remove("demofile.txt")
+	
 else:
 	os.remove("D:\jyjyjyj")
   
