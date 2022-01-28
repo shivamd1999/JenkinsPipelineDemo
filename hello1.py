@@ -1,6 +1,6 @@
 import os 
 import datetime
-path = 'D:\heknmd'
+path = 'D:\hello'
 
 today = datetime.datetime.today()
 os.chdir(path)
@@ -15,19 +15,15 @@ for root,directories,files in os.walk(path,topdown=False):
             print(os.path.join(root, name), filetime.days)
             os.remove(os.path.join(root, name))
             
-import os
-import zipfile
-    
-def zipdir(path, ziph):
-    # ziph is zipfile handle
-    for root, dirs, files in os.walk(path):
-        for file in files:
-            ziph.write(os.path.join(root, file), 
-                       os.path.relpath(os.path.join(root, file), 
-                                       os.path.join(path, 'D:\heknmd')))
-      
-zipf = zipfile.ZipFile('Python.zip', 'w', zipfile.ZIP_DEFLATED)
-zipdir('tmp/', zipf)
-zipf.close()
-print(dir(zipf))
+# importing ZipFile class from zipfile module
+from zipfile import ZipFile
+
+# specifying the zip file_name
+file = "D:\hello"
+
+# opening the zip file in READ mode
+with ZipFile(file, 'r') as zip:
+    # to get a list containing a ZipInfo object
+    print(zip.getinfo("test"))
+
             
