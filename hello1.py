@@ -1,6 +1,6 @@
 import os 
 import datetime
-path = 'D:\hello\Python1.zip'
+path = 'D:\hello'
 
 today = datetime.datetime.today()
 os.chdir(path)
@@ -22,15 +22,13 @@ for dirpath,dirnames,filenames in os.walk(path):
 
 import os
 import zipfile
-    
 def zipdir(path, ziph):
     # ziph is zipfile handle
     for root, dirs, files in os.walk(path):
+        print("Following fies will be zipped")
         for file in files:
-            ziph.write(os.path.join(root, file), 
-                       os.path.relpath(os.path.join(root, file), 
-                                       os.path.join(path, 'D:\hello\Python1.zip')))
-      
-zipf = zipfile.ZipFile('Python1.zip', 'w', zipfile.ZIP_DEFLATED)
-zipdir('tmp/', zipf)
+            ziph.write(os.path.join(root, file))
+            print(file)
+zipf = zipfile.ZipFile('Zipped_file.zip', 'w', zipfile.ZIP_DEFLATED)
+zipdir('D:\hello', zipf)
 zipf.close()
