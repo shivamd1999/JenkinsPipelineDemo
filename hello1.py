@@ -1,6 +1,5 @@
 import os 
 import datetime
-import glob
 path = 'D:\projects'
 
 today = datetime.datetime.today()
@@ -20,5 +19,5 @@ for root,directories,files in os.walk(path,topdown=False):
 for dirpath,dirnames,filenames in os.walk(path):
     print("current path",dirpath)
     print("current directories",dirnames)
-    print("the updated files are:",filenames)
+    print("The Remaining files are:",filenames)
     
