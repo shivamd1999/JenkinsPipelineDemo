@@ -28,7 +28,7 @@ import os
 def get_all_file_paths(directory):
 
 	# initializing empty file paths list
-	file_paths = [D:\projects]
+	file_paths = 'D:\projects'
 
 	# crawling through directory and subdirectories
 	for root, directories, files in os.walk(directory):
@@ -42,7 +42,7 @@ def get_all_file_paths(directory):
 
 def main():
 	# path to folder which needs to be zipped
-	directory = './python_files'
+	directory = 'D:\projects'
 
 	# calling function to get all file paths in the directory
 	file_paths = get_all_file_paths(directory)
@@ -53,7 +53,7 @@ def main():
 		print(file_name)
 
 	# writing files to a zipfile
-	with ZipFile('my_python_files.zip','w') as zip:
+	with ZipFile('D:\projects','w') as zip:
 		# writing each file one by one
 		for file in file_paths:
 			zip.write(file)
