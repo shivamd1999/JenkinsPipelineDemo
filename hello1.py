@@ -17,8 +17,7 @@ for root,directories,files in os.walk(path,topdown=False):
             os.remove(os.path.join(root, name))
             
  
-for dirpath,dirnames,filenames in os.walk(path):
+for dirpath,filenames in os.walk(path):
     print("current path",dirpath)
-    print("current directories",dirnames)
     print("the updated files are:",filenames)
     
