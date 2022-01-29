@@ -2,7 +2,7 @@ import os
 import time
 from pathlib import Path
 from zipfile import ZipFile
-path = 'D:\hello'
+path = 'D:\Projects'
 os.chdir(path)
 files = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
 files.reverse()
@@ -13,7 +13,7 @@ for file in files[5:]:
 latest = files[:5]
 print("Latest:", latest)
 
-ZIPPED_FILE_DIR = Path('D:\shivam')
+ZIPPED_FILE_DIR = Path('D:\Projects')
 
 def get_list_of_all_folders(download_dir: Path):
     return [f for f in download_dir.iterdir() if download_dir.is_dir()]
