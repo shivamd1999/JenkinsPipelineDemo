@@ -13,7 +13,6 @@ for file in files[5:]:
 latest = files[:5]
 print("Latest:", latest)
 
-ZIPPED_FILE_DIR = Path('D:\Projects')
 
 working_folder = 'D:\shivamdubey'
 files = os.listdir(working_folder)
