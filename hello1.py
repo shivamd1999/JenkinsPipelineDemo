@@ -1,6 +1,6 @@
 import os
 import time
-path = 'D:\shivamdubey'
+path = 'D:\Saved'
 os.chdir(path)
 files = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
 files.reverse()
@@ -12,9 +12,9 @@ latest = files[:5]
 print("Latest:", latest)
 
 import zipfile
-working_folder = 'D:\shivamdubey'
+working_folder = 'D:\Saved'
 files = os.listdir(working_folder)
-ZipFile = zipfile.ZipFile("python.zip", "w" )
+ZipFile = zipfile.ZipFile("Saved.zip", "w" )
 for a in files:
     ZipFile.write(os.path.basename(a), compress_type=zipfile.ZIP_DEFLATED)
 ZipFile.close()
