@@ -3,7 +3,7 @@ import time
 import json
 #path='D:\Saved'
 with open('file.json') as f:
-          data = json.loads(f)
+          data = json.load(f)
           data.close()
 print(data)
 # os.chdir(path)
