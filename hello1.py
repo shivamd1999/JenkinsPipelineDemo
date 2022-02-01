@@ -3,8 +3,8 @@ import time
 import json
 #path='D:\Saved'
 
-with open('file.json','f') as filedata:
-	 f = json.load(filedata)
+with open('file.json','r') as filedata:
+	 port = json.load(filedata)
 print(f['path'])
 os.chdir(path)
 files = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
