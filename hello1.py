@@ -5,7 +5,7 @@ import json
 
 with open('file.json','r') as filedata:
 	 port = json.load(filedata)
-print(f['path'])
+print(f['path','working_folder'])
 os.chdir(path)
 files = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
 files.reverse()
