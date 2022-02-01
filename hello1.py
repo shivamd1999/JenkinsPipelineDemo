@@ -3,7 +3,7 @@ import time
 import json
 #path='D:\Saved'
 
-data = json.loads('people_string')
+data = json.loads('file.json')
 print(data)
 os.chdir(path)
 files = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
