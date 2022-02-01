@@ -4,7 +4,7 @@ import json
 with open('file.json') as f:
     data = json.load(f)
     
-print data
+print(data)
 
 os.chdir(path)
 files = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
