@@ -4,7 +4,7 @@ import json
 #path='D:\Saved'
 
 with open('file.json','r') as filedata:
-	 port = json.load(filedata)
+	r = json.load(filedata)
 print(f['path','working_folder'])
 os.chdir(path)
 files = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
