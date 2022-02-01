@@ -1,11 +1,7 @@
 import os
 import time
 import json
-with open('file.json') as f:
-    data = json.load(f)
-    
-print(data)
-
+path='D:\Saved'
 os.chdir(path)
 files = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
 files.reverse()
@@ -17,7 +13,7 @@ latest = files[:5]
 print("Latest:", latest)
 
 import zipfile
-
+working_folder = 'D:\Saved'
 files = os.listdir(working_folder)
 ZipFile = zipfile.ZipFile("Saved.zip", "w" )
 for a in files:
