@@ -3,7 +3,7 @@ import time
 import json
 #path='D:\Saved'
 
-with open('file.json','f'') as filedata:
+with open('file.json','f') as filedata:
 	 f = json.load(filedata)
 print(f['path'])
 os.chdir(path)
