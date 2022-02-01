@@ -3,14 +3,9 @@ import time
 import json
 #path='D:\Saved'
 
-f = open('file.json')
-data = json.load(f)
-
-for i in data['file.json']:
-	print(i)
-
-f.close()
-
+with open('file.json','f'') as filedata:
+	 f = json.load(filedata)
+print(f['path'])
 os.chdir(path)
 files = sorted(os.listdir(os.getcwd()), key=os.path.getmtime)
 files.reverse()
