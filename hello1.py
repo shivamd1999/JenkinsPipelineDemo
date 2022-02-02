@@ -12,7 +12,7 @@ try:
                             key = lambda x: os.path.getmtime(os.path.join(filedata['path'], x)))
     fileno=filedata['files']
     list_of_files.reverse()
-    print("The Update Files are:")
+    print("The Latest Files are:")
     for index, file in enumerate(list_of_files):
         if index > (fileno-1):
             os.remove(os.path.join(filedata['path'],file))
