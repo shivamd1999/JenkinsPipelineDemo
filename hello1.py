@@ -8,7 +8,7 @@ try:
                     list_of_files = filter( lambda x: os.path.isfile(os.path.join(filedata['path'], x)),
                                            os.listdir(filedata['path']) )
                     list_of_files = sorted( list_of_files,
-                                           key = lambda x: os.path.getmtime(os.path.join(filedata['path'] x)))
+                                           key = lambda x: os.path.getmtime(os.path.join(filedata['path'], x)))
                     fileno=filedata['files']
                     list_of_files.reverse()
                     print("the latest files are:")
