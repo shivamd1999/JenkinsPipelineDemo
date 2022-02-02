@@ -35,7 +35,7 @@ try:
                                                             zip.write(os.path.join(filedata['path'],file),f_path + file)
                                                             zip.close()
                                                             print("file zipped successfully")
-                                                            return os.rename(new_file,filedata[''])
+                                                            return os.rename(new_file,filedata['"working_folder'])
                                                   prepare_zip(filedata['path'])
                   
 except FileExistsError:
