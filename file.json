@@ -1,6 +1,6 @@
 {
-    "path": "D:\\Saved",
+    "path": "D:\\Saved\\files",
     "files" : 5,
-    "subdir" : "G:\\Python_Workspace\\Flask_pytest",
-    "working_folder": "D:\\Saved\\Python.zip"
+    "subdir" : "D:\\Saved",
+    "working_folder": "D:\\Saved\\files\\Python.zip"
 }
