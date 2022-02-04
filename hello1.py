@@ -4,7 +4,7 @@ import sys
 import zipfile
 import os
 import glob
-with open('Test.json','r') as filesdata:
+with open('file.json','r') as filesdata:
     filedata=json.load(filesdata)   
 list_of_files = filter( lambda x: os.path.isfile(os.path.join(filedata['path'], x)),
                         os.listdir(filedata['path']))
@@ -43,7 +43,7 @@ else:
             for file in files:
                 zip.write(os.path.join(filedata['path'], file), f_path + file)
         zip.close()
-        return os.rename(new_file,filedata['Zip_file_name'])
+        return os.rename(new_file,filedata['working_folder'])
     os.chdir(filedata['subdir'])
     for file in glob.glob("*.zip"):
          if os.path.exists(file):
