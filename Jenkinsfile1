@@ -7,9 +7,9 @@ pipeline {
                 bat 'hello.py'
             }
         }
-        stage('Test') {
+        stage('batch') {
             steps {
-                echo 'Testing'
+                echo 'hello.bat'
             }
         }
         stage('Release') {
