@@ -1,5 +1,5 @@
 pipeline {
-    agent {lable: 'Slave1'}
+    agent any
 
     stages {
         stage('Python') {
