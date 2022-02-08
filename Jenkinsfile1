@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('batch') {
             steps {
-                echo 'hello.bat'
+                echo 'hello'
             }
         }
         stage('Release') {
