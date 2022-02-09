@@ -1,16 +1,27 @@
 pipeline {
-    agent { label 'Slave && Slave' }
+    agent {label 'Slave'}
     
     stages {
-        stage('batch') {
+        stage('Test') {
             steps {
-                echo 'hello'
+                echo 'Testing'
             }
         }
         stage('Release') {
             steps {
                 echo 'Releasing'
             }
+        }   
+        stage('Test1') {
+        agent {label 'Slave'}
+            steps {
+                echo 'Testing'
+            }
         }
-    }
+        stage('Release1') {
+            steps {
+                echo 'Releasing'
+            }
+        }
+    }    
 }
