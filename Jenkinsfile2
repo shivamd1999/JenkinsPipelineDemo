@@ -16,14 +16,14 @@ pipeline {
             agent {label 'Slave'}
                 steps {
                 echo 'Testing'
-                build(job: "Pythondemo")
+                build(job: "Sample_Projects1")
                 }
             }
             stage('Parallel Release1') {
             agent {label 'Slave'}
                 steps {
                     echo 'Releasing'
-                    build(job: 'Project_zip')
+                    build(job: 'Sample_Projects4')
                 }
             } 
         }
