@@ -2,30 +2,32 @@ pipeline {
     agent {label 'Slave'}
     stages {
         stage('Test') {
-            steps {
-                echo 'Testing'
-            }
-        }
-        parallel {
-            stage('Parallel Release') {
+            parallel {
+                stage('Parallel Release') {
+                        steps {
+                            echo 'Releasing'
+                        }
+                    }   
+                stage('Parallel Test1') {
+                agent {label 'Slave'}
+                    steps {
+                        echo 'Testing'
+                        build(job: "Sample_Projects1")
+                    }
+                }
+                stage('Parallel Release1') {
+                agent {label 'Slave'}
                     steps {
                         echo 'Releasing'
+                        build(job: 'Sample_Projects4')
                     }
-                }   
-            stage('Parallel Test1') {
-            agent {label 'Slave'}
-                steps {
-                echo 'Testing'
-                build(job: "Sample_Projects1")
                 }
+                stage('Deploy') {
+                    steps {
+                        echo 'Deploying'
+                    }
+                }    
             }
-            stage('Parallel Release1') {
-            agent {label 'Slave'}
-                steps {
-                    echo 'Releasing'
-                    build(job: 'Sample_Projects4')
-                }
-            } 
         }
-    }    
-}
+    }
+}    
