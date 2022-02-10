@@ -4,14 +4,12 @@ pipeline {
         stage('Test') {
             parallel {
                 stage('Parallel Test1') {
-                agent {label 'Slave'}
                     steps {
                         echo 'Testing'
                         build(job: "Sample_Projects1")
                     }
                 }
                 stage('Parallel Release1') {
-                agent {label 'Slave'}
                     steps {
                         echo 'Releasing'
                         build(job: 'Sample_Projects4')
