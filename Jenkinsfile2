@@ -3,11 +3,6 @@ pipeline {
     stages {
         stage('Test') {
             parallel {
-                stage('Parallel Release') {
-                        steps {
-                            echo 'Releasing'
-                        }
-                    }   
                 stage('Parallel Test1') {
                 agent {label 'Slave'}
                     steps {
@@ -22,11 +17,6 @@ pipeline {
                         build(job: 'Sample_Projects4')
                     }
                 }
-                stage('Deploy') {
-                    steps {
-                        echo 'Deploying'
-                    }
-                }    
             }
         }
     }
