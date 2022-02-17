@@ -1,2 +1,1 @@
-peinrhbbnn
-hbjhb
+print ("hello")
