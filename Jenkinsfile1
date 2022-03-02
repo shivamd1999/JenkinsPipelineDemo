@@ -7,3 +7,5 @@ pipeline {
                 bat "save1.bat"
             }
         }
+    }
+}
