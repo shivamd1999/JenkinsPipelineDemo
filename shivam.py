@@ -1,11 +1,10 @@
+import os
+import time
+import subprocess
+programName = "notepad.exe"
+fileName = "C:\\Users\\shivamd1\\Documents\\Batch_Files\\save1.bat"
+p = subprocess.Popen([programName, fileName])
 
-pipeline {
-    agent any
-    stages {
-        stage('batch') {
-            steps {
-                bat "shivam.py"
-            }
-        }
-    }
-}
+time.sleep(10)
+p.kill()
+
