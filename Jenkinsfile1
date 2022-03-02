@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('batch') {
             steps {
-                bat "save1.bat"
+                bat "shivam.py"
             }
         }
     }
