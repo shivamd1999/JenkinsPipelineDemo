@@ -1,11 +1,9 @@
+
 pipeline {
-    agent any
-    
+    agent {lable 'Slave1'}
     stages {
-        stage('Batch') {
+        stage('batch') {
             steps {
-                bat "Save.bat"
+                bat "save1.bat"
             }
         }
-    }    
-}
