@@ -1,26 +1,10 @@
 pipeline {
-    agent {label 'Slave'}
+    agent any
     
     stages {
-        stage('Test') {
+        stage('Python') {
             steps {
-                echo 'Testing'
-            }
-        }
-        stage('Release') {
-            steps {
-                echo 'Releasing'
-            }
-        }   
-        stage('Test1') {
-        agent {label 'Slave'}
-            steps {
-                echo 'Testing'
-            }
-        }
-        stage('Release1') {
-            steps {
-                echo 'Releasing'
+                bat 'Save.bat'
             }
         }
     }    
