@@ -2,9 +2,9 @@ pipeline {
     agent any
     
     stages {
-        stage('Python') {
+        stage('Batch') {
             steps {
-                bat 'Save.bat'
+                bat "Save.bat"
             }
         }
     }    
