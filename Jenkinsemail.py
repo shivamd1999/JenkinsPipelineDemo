@@ -1,6 +1,6 @@
 import smtplib
 
-server = smtplib.SMTP('smtp.gmail.com', 587)
+server = smtplib.SMTP.SSL('smtp.gmail.com', 465)
 
 server.starttls()
 server.login('7000766645az@gmail.com','sxxbrfedfakhlreh')
