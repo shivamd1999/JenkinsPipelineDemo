@@ -1,5 +1,5 @@
 import smtplib
-import SSL
+import ssl
 
 server = smtplib.SMTP.SSL('smtp.gmail.com', 465)
 
