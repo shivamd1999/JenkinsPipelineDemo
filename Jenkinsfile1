@@ -13,7 +13,7 @@ pipeline {
                 subject: "Jenkins Pipeline Build Status",
                 body:"${currentBuild.currentResult}: Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n\n ${currentBuild.currentResult}: Job ${env.JOB_NAME}",
                 recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']],
-                to:'dubeyshivam264@gmail.com'
+                to:'7000766645az@gmail.com'
                }
             }
         }
