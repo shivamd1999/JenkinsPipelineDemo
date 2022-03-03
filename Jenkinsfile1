@@ -6,15 +6,10 @@ pipeline {
                 bat "shivam.py"
             }
         }
-        stage('post') {
-            steps {
-                echo 'Status of build'
-                emailext attachLog:true,
-                subject: "Jenkins Pipeline Build Status",
-                body:"${currentBuild.currentResult}: Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n\n ${currentBuild.currentResult}: Job ${env.JOB_NAME}",
-                recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']],
-                to:'7000766645az@gmail.com'
-               }
+        post { 
+            always {
+                bat 'Jenkinsemail.py'
             }
         }
     }
+}
