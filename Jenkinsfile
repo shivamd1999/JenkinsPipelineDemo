@@ -1,4 +1,3 @@
-
 pipeline {
     agent any
 
@@ -6,6 +5,11 @@ pipeline {
         stage('Input') {
             steps {
                 input('Do you want to proceed?')
+            }
+        }
+        stage('build') {
+            steps {
+                bat "PosNeg.py"
             }
         }
 
