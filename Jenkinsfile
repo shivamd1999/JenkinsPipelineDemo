@@ -1,14 +1,9 @@
 pipeline {
-    environment {
-        doError = '1'
-    }
     agent any
         stages {
         stage('Bulding') {
             steps {
                 bat 'Jenkinsemail.py'
-            }
-        }
             }
         }
     }
