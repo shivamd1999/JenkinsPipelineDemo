@@ -1,44 +1,17 @@
-pipeline {
 
+pipeline {
     agent any
 
     stages {
-
-        stage("Interactive_Input") {
+        stage('Input') {
             steps {
-                script {
+                input('Do you want to proceed?')
+            }
+        }
 
-                    // Variables for input
-                    def inputConfig
-                    def inputTest
-
-                    // Get the input
-                    def userInput = input(
-                            id: 'userInput', message: 'Enter path of test reports:?',
-                            parameters: [
-
-                                    string(defaultValue: 'None',
-                                            description: 'Path of config file',
-                                            name: 'Config'),
-                                    string(defaultValue: 'None',
-                                            description: 'Test Info file',
-                                            name: 'Test'),
-                            ])
-
-                    // Save to variables. Default to empty string if not found.
-                    inputConfig = userInput.Config?:''
-                    inputTest = userInput.Test?:''
-
-                    // Echo to console
-                    echo("IQA Sheet Path: Postive.txt")
-                    echo("Test Info file path: Postive.txt")
-
-                    // Write to file
-                    writeFile file: "Postive.txt", text: "Config=${inputConfig}\r\nTest=${inputTest}"
-
-                    // Archive the file (or whatever you want to do with it)
-                    archiveArtifacts 'Postive.txt'
-                }
+        stage('If Proceed is clicked') {
+            steps {
+                print('hello')
             }
         }
     }
