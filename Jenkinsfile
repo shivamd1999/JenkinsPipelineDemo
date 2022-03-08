@@ -34,10 +34,10 @@ pipeline {
                     echo("Test Info file path: ${inputTest}")
 
                     // Write to file
-                    writeFile file: "inputData.txt", text: "Config=${inputConfig}\r\nTest=${inputTest}"
+                    writeFile file: "Postive.txt", text: "Config=${inputConfig}\r\nTest=${inputTest}"
 
                     // Archive the file (or whatever you want to do with it)
-                    archiveArtifacts 'inputData.txt'
+                    archiveArtifacts 'Postive.txt'
                 }
             }
         }
