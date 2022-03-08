@@ -30,8 +30,8 @@ pipeline {
                     inputTest = userInput.Test?:''
 
                     // Echo to console
-                    echo("IQA Sheet Path: ${inputConfig}")
-                    echo("Test Info file path: ${inputTest}")
+                    echo("IQA Sheet Path: Postive.txt")
+                    echo("Test Info file path: Postive.txt")
 
                     // Write to file
                     writeFile file: "Postive.txt", text: "Config=${inputConfig}\r\nTest=${inputTest}"
