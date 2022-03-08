@@ -6,29 +6,9 @@ pipeline {
         stages {
         stage('Bulding') {
             steps {
-                bat 'PosNeg.py'
+                bat 'Jenkinsemail.py'
             }
         }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying'
-            }
-        }
-        stage('Error') {
-            when {
-                expression { doError == '1' }
-            }
-            steps {
-                echo "Failure"
-                error "failure test."
-            }
-        }
-        stage('Success') {
-            when {
-                expression { doError == '0' }
-            }
-            steps {
-                echo "OK"
             }
         }
     }
