@@ -1,4 +1,4 @@
-txt_file = open("input.txt", "r")
+txt_file = open("C:\\Users\\shivamd1\\input.txt", "r")
 file_content = txt_file.read()
 print("The file content are: ", file_content)
 
@@ -7,8 +7,8 @@ txt_file.close()
 print("The list is: ", list)
 
 try:
-    P = open("Positive.txt","w")  
-    N = open("Negative.txt","w")
+    P = open("C:\\Users\\shivamd1\\Positive.txt","w")  
+    N = open("C:\\Users\\shivamd1\\Negative.txt","w")
     
     for num in list:
         try:
