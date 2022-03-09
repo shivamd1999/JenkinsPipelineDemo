@@ -1,4 +1,4 @@
-txt_file = open("C:\\Users\\shivamd1\\input.txt", "r")
+txt_file = open("input.txt", "r")
 file_content = txt_file.read()
 print("The file content are: ", file_content)
 
