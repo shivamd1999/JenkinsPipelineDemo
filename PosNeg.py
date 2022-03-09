@@ -1,9 +1,9 @@
-txt_file = open("input.txt", "r")
-file_content = txt_file.read()
+file = open("input.txt", "r")
+file_content = file.read()
 print("The file content are: ", file_content)
 
 list = file_content.split(",")
-txt_file.close()
+file.close()
 print("The list is: ", list)
 
 try:
