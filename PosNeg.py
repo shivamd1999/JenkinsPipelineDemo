@@ -1,8 +1,14 @@
-input_string = input("Enter a list element separated by space \n")
-list  = input_string.split()
+txt_file = open("input.txt", "r")
+file_content = txt_file.read()
+print("The file content are: ", file_content)
+
+list = file_content.split(",")
+txt_file.close()
+print("The list is: ", list)
+
 try:
-    P = open("C:\\Users\\shivamd1\\Desktop\\Positive.txt","w")  
-    N = open("C:\\Users\\shivamd1\\Desktop\\Negative.txt","w")
+    P = open("Positive.txt","w")  
+    N = open("Negative.txt","w")
     
     for num in list:
         try:
