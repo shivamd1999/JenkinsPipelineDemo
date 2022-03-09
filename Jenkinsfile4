@@ -1,11 +1,21 @@
 pipeline {
+    environment {
+        doError = '1'
+    }
     agent any
-
-    stages {
-        stage('Hello') {
+        stages {
+        stage('Bulding') {
             steps {
-                echo 'Hello world'
+                bat 'PythonwithJson.py'
             }
+        }
+    }
+    post {
+        always {
+
+                echo 'Status of build'
+                emailext body: '', postsendScript: '''job name:
+                Build number:''', subject: 'Job Name', to: 'dubeyshivam264@gmail.com'
         }
     }
 }
