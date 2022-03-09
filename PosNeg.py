@@ -7,8 +7,8 @@ txt_file.close()
 print("The list is: ", list)
 
 try:
-    P = open("C:\\Users\\shivamd1\\Positive.txt","w")  
-    N = open("C:\\Users\\shivamd1\\Negative.txt","w")
+    P = open("Positive.txt","w")  
+    N = open("Negative.txt","w")
     
     for num in list:
         try:
