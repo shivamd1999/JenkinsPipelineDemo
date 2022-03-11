@@ -10,7 +10,13 @@ pipeline {
     post {
         always {
             
-                emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
+                echo 'Status of build'
+                emailext attachLog:true,
+                subject: "Jenkins Pipeline Build Status",
+
+                body:"${currentBuild.currentResult}: Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n ${currentBuild.currentResult}: Job ${env.JOB_NAME} \n ${currentBuild.currentResult}: ${env.BUILD_TAG}",
+
+                to:'7000766645az@gmail.com'
         }
     }
 }
