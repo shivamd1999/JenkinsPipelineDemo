@@ -3,7 +3,7 @@ pipeline {
         stages {
         stage('Bulding') {
             steps {
-                bat 'shivam.py'
+                echo 'hello'
             }
         }
     }
