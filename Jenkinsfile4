@@ -16,7 +16,7 @@ pipeline {
 
                 body:"${currentBuild.currentResult}: Job ${JOB_NAME} build ${BUILD_NUMBER}\n ${currentBuild.currentResult}: Job ${JOB_NAME} \n ${currentBuild.currentResult}: ${BUILD_TAG}",
 
-                to:'dubeyshivam264@gmail.com'
+                to:'jagarwalj1998@gmail.com'
         }
     }
 }
