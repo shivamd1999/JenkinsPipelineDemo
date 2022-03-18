@@ -14,7 +14,7 @@ pipeline {
                 emailext attachLog:true,
                 subject: "Jenkins Pipeline Build Status",
 
-                body:"${currentBuild.currentResult}: Job ${JOB_NAME} build ${BUILD_NUMBER}\n ${BUILD_TAG}",
+                body:"${currentBuild.currentResult}: Job ${JOB_NAME} \n Build ${BUILD_NUMBER}\n ${BUILD_TAG}",
 
                 to:'dubeyshivam264@gmail.com'
                                
