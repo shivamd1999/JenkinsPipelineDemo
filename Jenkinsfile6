@@ -12,7 +12,7 @@ pipeline {
             
                 echo 'Status of build'
                 emailext attachLog:true,
-                emaillext mimeType: 'text/html',
+                emailext mimeType: 'text/html',
                 subject: "Jenkins Pipeline Build Status",
 
                 body:"${currentBuild.currentResult}: Job ${JOB_NAME} build ${BUILD_NUMBER}\n ${BUILD_TAG} \n Html ${FILE, path="email.html"}",
