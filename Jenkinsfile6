@@ -11,13 +11,13 @@ pipeline {
         always {
             
                 echo 'Status of build'
-                
-           
+                emailext attachLog:true,
+                subject: "Jenkins Pipeline Build Status",
+
                 body:"${currentBuild.currentResult}: Job ${JOB_NAME} build ${BUILD_NUMBER}\n ${currentBuild.currentResult}: Job ${JOB_NAME} \n ${currentBuild.currentResult}: ${BUILD_TAG} \n ${FILE,path="email.html"}",
 
                 to:'dubeyshivam264@gmail.com'
-
-                
+                               
         }
     }
 }
