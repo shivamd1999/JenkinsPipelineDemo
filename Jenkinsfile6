@@ -12,7 +12,7 @@ pipeline {
             
                 echo 'Status of build'
                 
-                publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: false, reportDir: '', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '']),
+                publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: false, reportDir: '', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
                 body:"${currentBuild.currentResult}: Job ${JOB_NAME} build ${BUILD_NUMBER}\n ${currentBuild.currentResult}: Job ${JOB_NAME} \n ${currentBuild.currentResult}: ${BUILD_TAG}",
 
                 to:'dubeyshivam264@gmail.com'
