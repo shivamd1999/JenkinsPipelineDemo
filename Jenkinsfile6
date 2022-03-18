@@ -3,7 +3,7 @@ pipeline {
         stages {
         stage('Bulding') {
             steps {
-                bat 'hello.html'
+                bat 'htmlemail.py'
             }
         }
     }
