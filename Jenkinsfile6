@@ -14,7 +14,7 @@ pipeline {
                 emailext attachLog:true,
                 subject: "Jenkins Pipeline Build Status",
 
-                body: ${FILE_path=  "${hello.html} "}",
+                body: "${FILE_path=  "${hello.html} "}",
 
                 to:'dubeyshivam264@gmail.com'
                                
