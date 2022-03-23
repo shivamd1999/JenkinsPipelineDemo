@@ -10,7 +10,7 @@ pipeline {
           string1 = "123abc"
           string2 = "456def"
           
-          build job: 'foo3', 
+          build job: 'Task_1', 
             parameters: [
               // both is possible
               string(name: 'a_string', value: "${string1}"),
