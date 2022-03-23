@@ -24,7 +24,7 @@ pipeline {
         }
         stage('hello') {
             steps {
-                bat 'lav.py'
+                echo '{$JOB_NAME}'
             }
         }
     }
