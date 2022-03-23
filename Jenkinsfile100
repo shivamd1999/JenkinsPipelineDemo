@@ -26,7 +26,7 @@ pipeline{
                 echo "You can also use \${new Date()} -> ${new Date()}"                                                
             }
         }
-        stage("Build Duration"){
+        stage("Build ok"){
             steps{
                 echo "The build number is Current time ${currentBuild.durationString}"
                 echo "You can also use \${currentBuild.durationString} -> ${currentBuild.durationString}"                                                
