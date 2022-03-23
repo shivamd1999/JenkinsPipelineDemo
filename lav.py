@@ -1,5 +1,5 @@
-import os 
-qualifier = os.environ('${env.BUILD_NUMBER}')
+def buildnumber = currentBuild.number
+echo "build is ${currentBuild.number}"
 
 
 
