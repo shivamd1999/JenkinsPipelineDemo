@@ -1,21 +1,9 @@
-import jenkins.model.Jenkins
-name = "Task_1"
-def items = new LinkedHashSet();
-def job = Hudson.instance.getJob(name)
-items.add(job);
-items.each { item ->
-    try {
-        def job_data = Jenkins.instance.getItemByFullName(item.fullName)
-        println 'Job: ' + item.fullName
-        if (job_data.getLastBuild()) {
-            last_job_num = job_data.getLastBuild().getNumber()
-            def upStreamBuild = Jenkins.getInstance().getItemByFullName(item.fullName).getBuildByNumber(last_job_num)
-println 'LastBuildNumer: ' + last_job_num
-            println "LastBuildTime: ${upStreamBuild.getTime()}"
-        } else {
-            println 'LastBuildNumer: Null'
-        }
-    } catch (Exception e) {
-        println ' Ignoring exception ' + e
-    }
-}
+from jenkinsapi import jenkins
+ci_jenkins_url = "https://http://localhost:8080/job/Task_1/"
+username = "shivamd1"
+token = "CzpW8Wy9"
+job = "Task_1"
+j = jenkins.Jenkins(ci_jenkins_url, username=username, password=token)
+
+if __name__ == "__main__":
+    j.build_job(job)
