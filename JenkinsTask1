@@ -2,6 +2,11 @@ pipeline {
     agent any
 
     stages {
+        stage("Env Variables") {
+            steps {
+                bat "set"
+            }
+        }
         stage('build') {
             steps {
                 echo 'building'
@@ -20,11 +25,6 @@ pipeline {
         stage('deploy') {
             steps {
                 echo 'deploying'
-            }
-        }
-        stage("Env Variables") {
-            steps {
-                bat "set"
             }
         }
     }
