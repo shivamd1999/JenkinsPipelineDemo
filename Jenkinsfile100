@@ -22,8 +22,8 @@ pipeline{
         }
         stage("Build Duration"){
             steps{
-                echo "The build number is ${env.BUILD_DURATION}"
-                echo "You can also use \${BUILD_DURATION} -> ${BUILD_DURATION}"                                                
+                echo "The build number is Current time ${new Date()}"
+                echo "You can also use \${new Date()} -> ${new Date()}"                                                
             }
         }
     }     
