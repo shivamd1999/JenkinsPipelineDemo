@@ -4,32 +4,27 @@ pipeline{
     stages{
         stage("Build number "){
             steps{
-                echo "The build number is ${env.BUILD_NUMBER}"
-                echo "You can also use \${BUILD_NUMBER} -> ${BUILD_NUMBER}"                                                
+                echo "The build number is ${env.BUILD_NUMBER}"                                              
             }
         }
         stage("Jobs Name"){
             steps{
-                echo "The build number is ${env.JOB_NAME}"
-                echo "You can also use \${JOB_NAME} -> ${JOB_NAME}"                                                
+                echo "The Jobs name is ${env.JOB_NAME}"                                              
             }
         }
         stage("Build URL"){
             steps{
-                echo "The build number is ${env.BUILD_URL}"
-                echo "You can also use \${BUILD_URL} -> ${BUILD_URL}"                                                
+                echo "The Build URL is ${env.BUILD_URL}"                                               
             }
         }
         stage("Build Duration"){
             steps{
-                echo "The build number is Current time ${new Date()}"
-                echo "You can also use \${new Date()} -> ${new Date()}"                                                
+                echo "The Updated date ${new Date()}"                                                
             }
         }
-        stage("Build ok"){
+        stage("Build Duration"){
             steps{
-                echo "The build number is Current time ${currentBuild.durationString}"
-                echo "You can also use \${currentBuild.durationString} -> ${currentBuild.durationString}"                                                
+                echo "The Build Duration is  ${currentBuild.durationString}"                                               
             }
         }
     }     
