@@ -1,13 +1,12 @@
-pipeline {
+pipeline{
     agent any
-    stages {
-        stage('Setup parameters') {
-            steps {
-                script {
-                    properties([gitLabConnection(gitLabConnection: '', jobCredentialId: ''), parameters([choice(choices: ['one', 'two ', 'three'], description: '''Job_Name
-                    Build_Number Build_url''', name: 'Task_1')])])
-                }
+    
+    stages{
+        stage("Env Build Number"){
+            steps{
+                echo "The build number is ${env.BUILD_NUMBER}"
+                echo "You can also use \${BUILD_NUMBER} -> ${BUILD_NUMBER}"                                                
             }
         }
-    }   
+    }
 }
