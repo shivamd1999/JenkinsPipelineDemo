@@ -1,6 +1,6 @@
 
 
-info = server.get_job_info('Task_1')
+info = get_job_info('Task_1')
 
 # Loop over builds
 builds = info['builds']
