@@ -1,23 +1,36 @@
 pipeline {
-  agent any
-
-  stages {
-
-    stage('run job foo3') { 
-      steps {
-        script {
-          
-          string1 = "123abc"
-          
-          build job: 'Task_1', 
-            parameters: [
-              // both is possible
-              string(name: 'a_string', value: "${string1}"),
-            ]
-            wait: true
-
-         }
-       }
-     }
-   }
- }
+    agent any
+    stages {
+        stage('Setup parameters') {
+            steps {
+                script { 
+                    properties([
+                        parameters([
+                            choice(
+                                choices: ['ONE', 'TWO'], 
+                                name: 'PARAMETER_01'
+                            ),
+                            booleanParam(
+                                defaultValue: true, 
+                                description: '', 
+                                name: 'BOOLEAN'
+                            ),
+                            text(
+                                defaultValue: '''
+                                this is a multi-line 
+                                string parameter example
+                                ''', 
+                                 name: 'MULTI-LINE-STRING'
+                            ),
+                            string(
+                                defaultValue: 'scriptcrunch', 
+                                name: 'STRING-PARAMETER', 
+                                trim: true
+                            )
+                        ])
+                    ])
+                }
+            }
+        }
+    }   
+}
