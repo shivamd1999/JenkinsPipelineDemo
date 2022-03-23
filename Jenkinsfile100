@@ -17,7 +17,7 @@ pipeline{
                 echo "The Build URL is ${env.BUILD_URL}"                                               
             }
         }
-        stage("Build Duration"){
+        stage("Dates"){
             steps{
                 echo "The Updated date ${new Date()}"                                                
             }
