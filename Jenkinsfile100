@@ -14,10 +14,16 @@ pipeline{
                 echo "You can also use \${JOB_NAME} -> ${JOB_NAME}"                                                
             }
         }
-                stage("Build URL"){
+        stage("Build URL"){
             steps{
                 echo "The build number is ${env.BUILD_URL}"
                 echo "You can also use \${BUILD_URL} -> ${BUILD_URL}"                                                
+            }
+        }
+        stage("Build Duration"){
+            steps{
+                echo "The build number is ${env.BUILD_DURATION}"
+                echo "You can also use \${BUILD_DURATION} -> ${BUILD_DURATION}"                                                
             }
         }
     }     
