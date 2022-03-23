@@ -1,18 +1,21 @@
-import jenkins
-import urllib2 
-import urllib
-import sys
-
-j = jenkins.Jenkins('http://localhost:8080')
-if not j.job_exists('Task_1'):
-    j.create_job('Task_1', jenkins.EMPTY_CONFIG_XML)
-
-j.reconfig_job('Task_1', jenkins.RECONFIG_XML)
-j.build_job('Task_1')
-
-
-build_info=j.get_build_info('Task_1')
-if build_info['result']=='SUCCESS':
-    print "Build Success "
-else:
-    print " Build Failed "
+import jenkins.model.Jenkins
+name = "Task_1"
+def items = new LinkedHashSet();
+def job = Hudson.instance.getJob(name)
+items.add(job);
+items.each { item ->
+    try {
+        def job_data = Jenkins.instance.getItemByFullName(item.fullName)
+        println 'Job: ' + item.fullName
+        if (job_data.getLastBuild()) {
+            last_job_num = job_data.getLastBuild().getNumber()
+            def upStreamBuild = Jenkins.getInstance().getItemByFullName(item.fullName).getBuildByNumber(last_job_num)
+println 'LastBuildNumer: ' + last_job_num
+            println "LastBuildTime: ${upStreamBuild.getTime()}"
+        } else {
+            println 'LastBuildNumer: Null'
+        }
+    } catch (Exception e) {
+        println ' Ignoring exception ' + e
+    }
+}
