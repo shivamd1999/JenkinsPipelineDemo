@@ -10,10 +10,8 @@ if not j.job_exists('Task_1'):
 j.reconfig_job('Task_1', jenkins.RECONFIG_XML)
 j.build_job('Task_1')
 
-last_build_number = j.get_job_info('Task_1')['lastCompletedBuild'] ['number']
-print last_build_number
 
-build_info=j.get_build_info('Task_1',last_build_number)
+build_info=j.get_build_info('Task_1')
 if build_info['result']=='SUCCESS':
     print "Build Success "
 else:
