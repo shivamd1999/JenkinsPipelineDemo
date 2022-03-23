@@ -1,6 +1,13 @@
+import jenkins
 
-    
-import jenkinsapi
-from jenkinsapi.jenkins import Jenkins
-server = Jenkins(jenkins_url='http://localhost:8080/job/Task_1/',username='shivamd1',password='CzpW8Wy9')
-print(server.get_job("Task_1").get_last_buildnumber())
+server = jenkins.Jenkins('http://localhost:8080/', username='shivamd1',
+                         password='CzpW8Wy9')
+
+info = server.get_job_info('Task_1')
+
+# Loop over builds
+builds = info['builds']
+for build in builds:
+    for build in builds:
+        print(server.get_build_info('Task_1', 
+                                    build['number']))
