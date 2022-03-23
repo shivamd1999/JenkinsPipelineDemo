@@ -1,5 +1,5 @@
 import os 
-qualifier = os.environ("${env.BUILD_NUMBER}")
+qualifier = os.environ('${env.BUILD_NUMBER}')
 
 
 
