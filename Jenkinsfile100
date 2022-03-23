@@ -1,0 +1,25 @@
+pipeline {
+  agent any
+
+  stages {
+
+    stage('run job foo3') { 
+      steps {
+        script {
+          
+          string1 = "123abc"
+          string2 = "456def"
+          
+          build job: 'foo3', 
+            parameters: [
+              // both is possible
+              string(name: 'a_string', value: "${string1}"),
+              string(name: 'b_string', value: string2)
+            ]
+            wait: true
+
+         }
+       }
+     }
+   }
+ }
