@@ -1,10 +1,5 @@
-
-
-info = get_job_info('Task_1')
-
-# Loop over builds
-builds = info['builds']
-for build in builds:
-    for build in builds:
-        print(server.get_build_info('Task_1', 
-                                    build['number']))
+def my_function(the):
+    print(the + "")
+my_function(" build number is ${env.BUILD_NUMBER}")
+my_function("build number is ${env.JOB_NAME}")
+my_function("build number is ${env.BUILD_URL}")
