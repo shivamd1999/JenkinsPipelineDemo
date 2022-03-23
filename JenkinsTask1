@@ -22,9 +22,9 @@ pipeline {
                 echo 'deploying'
             }
         }
-        stage('hello') {
+        stage("Env Variables") {
             steps {
-                bat 'lav.py'
+                bat 'set'
             }
         }
     }
