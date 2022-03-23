@@ -11,7 +11,6 @@ pipeline{
             steps{
                 echo "The build number is ${env.JOB_NAME}"
                 echo "You can also use \${JOB_NAME} -> ${JOB_NAME}"                                                
-            }
-        }     
-    }
+        }
+    }     
 }
