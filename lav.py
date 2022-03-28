@@ -1,11 +1,9 @@
 import os
-from datetime import datetime
-now = datetime.now()
 print(os.environ['JOB_NAME'])
 print(os.environ['BUILD_NUMBER'])
 print(os.environ['BUILD_TAG'])
 print(os.environ['BUILD_URL'])
-print(os.environ['now.strftime("%Y-%m-%d %H:%M:%S")'])
+print(os.environ['currentDate'])
 
 # from datetime import datetime
 # now = datetime.now()
