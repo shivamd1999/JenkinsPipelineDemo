@@ -22,5 +22,10 @@ pipeline {
                 echo 'deploying'
             }
         }
+        stage("Env Var"){
+            steps{
+                bat'set'
+             }
+        }     
     }
 }
