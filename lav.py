@@ -1,5 +1,5 @@
 import os
-from datetime import datetimet
+from datetime import datetime
 now = datetime.now()
 print(os.environ['JOB_NAME'])
 print(os.environ['BUILD_NUMBER'])
