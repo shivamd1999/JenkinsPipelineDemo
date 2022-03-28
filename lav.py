@@ -2,7 +2,7 @@ def  funargs(*args):
     for item in args:
         print(item)
     
-har = [${env.BUILD_NUMBER}, ${env.JOB_NAME}, ${env.BUILD_URL}]
+har = ["${currentBuild.currentResult}: Job ${JOB_NAME} build ${BUILD_NUMBER}\n ${currentBuild.currentResult}: Job ${JOB_NAME} \n ${currentBuild.currentResult}: ${BUILD_TAG}"]
 funargs(*har)
 
 
