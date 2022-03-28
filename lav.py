@@ -1,12 +1,15 @@
 import os
-import datetime
+from datetime import datetimet
+now = datetime.now()
 print(os.environ['JOB_NAME'])
 print(os.environ['BUILD_NUMBER'])
 print(os.environ['BUILD_TAG'])
 print(os.environ['BUILD_URL'])
-print(os.environ['datetime.datetime.now()'])
+print(os.environ['now.strftime("%Y-%m-%d %H:%M:%S")'])
 
-
+# from datetime import datetime
+# now = datetime.now()
+# print (now.strftime("%Y-%m-%d %H:%M:%S"))
 
 # def  funargs(*args):
 #     for item in args:
