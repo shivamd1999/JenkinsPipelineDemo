@@ -24,7 +24,12 @@ pipeline {
         }
         stage ('Build JobB'){
             steps{
-                build job: 'Sample_Projects_pos', parameters: [string(name: ‘Environment', value: "production")]\n
+                build job: 'Sample_Projects_pos', parameters: [string(name: ‘Environment', value: "production")]
+            }
+        }
+        stage('deploying') {
+            steps {
+               echo 'depl'
             }
         }
     }
