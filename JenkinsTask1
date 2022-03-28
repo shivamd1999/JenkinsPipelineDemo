@@ -26,6 +26,11 @@ pipeline {
             steps{
                 bat'set'
              }
-        }     
+        }
+         stage ('Build JobB'){
+             steps{
+                 build job: 'Sample_Projects_pos', parameters: [string(name: ‘Environment', value: "production")]
+        }
+    }
     }
 }
