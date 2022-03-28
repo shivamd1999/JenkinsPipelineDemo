@@ -2,7 +2,7 @@ import os
 print(os.environ['JOB_NAME'])
 print(os.environ['BUILD_NUMBER'])
 print(os.environ['BUILD_URL'])
-print(os.environ['BUILD_DURATION'])
+print(os.getenv['BUILD_DURATION'])
 print(os.environ['BUILD_TAG'])
 
 # from datetime import datetime
