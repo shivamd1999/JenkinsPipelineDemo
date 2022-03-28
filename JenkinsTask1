@@ -24,7 +24,7 @@ pipeline {
         }
         stage ('Build JobB'){
             steps{
-                build job: 'Sample_Projects_pos', parameters: [string(name: ‘Environment', value: "production")],
+                build job: 'Sample_Projects_pos', parameters: [string(name: ‘Environment', value: "production")]\n
             }
         }
     }
