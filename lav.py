@@ -1,9 +1,13 @@
 import os
-print(os.environ["The Jobs name is:",'JOB_NAME'])
-print(os.environ['BUILD_NUMBER'])
-print(os.environ['BUILD_URL'])
-print(os.getenv['BUILD_DURATION'])
-print(os.environ['BUILD_TAG'])
+
+key = 'home'
+value = os.getenv(key, "JOB_NAME")
+print("The Jobs name is:",value)
+# print(os.environ["The Jobs name is:",'JOB_NAME'])
+# print(os.environ['BUILD_NUMBER'])
+# print(os.environ['BUILD_URL'])
+# print(os.getenv['BUILD_DURATION'])
+# print(os.environ['BUILD_TAG'])
 
 # from datetime import datetime
 # now = datetime.now()
