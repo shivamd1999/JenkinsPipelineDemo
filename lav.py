@@ -1,7 +1,8 @@
-def  function_name_print(a,b,c):
-    print(a,b,c)
+def  funargs(*args)
+    print(args[0]))
     
-function_name_print("${env.BUILD_NUMBER}","${env.JOB_NAME}","${env.BUILD_URL})
+har = ["${env.BUILD_NUMBER}","${env.JOB_NAME}","${env.BUILD_URL}]
+funargs(*har)
 
 
 
