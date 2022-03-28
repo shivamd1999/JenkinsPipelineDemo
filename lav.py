@@ -1,6 +1,4 @@
 import os
-import time
-import datetime
 print(os.environ['JOB_NAME'])
 print(os.environ['BUILD_NUMBER'])
 print(os.environ['BUILD_URL'])
