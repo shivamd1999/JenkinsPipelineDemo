@@ -1,5 +1,5 @@
 import os
-print(os.environ['JOB_NAME'])
+print(os.environ['JOB_NAME'\n,'BUILD_NUMBER'\n,'BUILD_TAG'])
 
 
 
