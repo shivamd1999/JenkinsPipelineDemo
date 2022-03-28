@@ -1,5 +1,5 @@
 import os
-print(os.environ['JOB_NAME'])
+print(os.environ["The Jobs name is:",'JOB_NAME'])
 print(os.environ['BUILD_NUMBER'])
 print(os.environ['BUILD_URL'])
 print(os.getenv['BUILD_DURATION'])
