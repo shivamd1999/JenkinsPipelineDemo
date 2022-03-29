@@ -4,8 +4,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo 'building'
-                echo 'print(os.environ['JOB_NAME'])'
+                bat 'Task.py'
             }
         }
         stage('test') {
