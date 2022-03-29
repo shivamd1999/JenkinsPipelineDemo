@@ -5,6 +5,7 @@ pipeline {
         stage('build') {
             steps {
                 echo 'building'
+                build job: "Sample_project2", parameters[string(name: "var", value: "${Build_NUMBER})]
             }
         }
         stage('test') {
@@ -20,11 +21,6 @@ pipeline {
         stage('deploy') {
             steps {
                 echo 'deploying'
-            }
-        }
-        stage('python') {
-            steps {
-                bat 'Task.py'
             }
         }
     }
