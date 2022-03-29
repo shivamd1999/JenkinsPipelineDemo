@@ -27,5 +27,10 @@ pipeline{
                 echo "The Build Duration is  ${currentBuild.durationString}"                                               
             }
         }
+        stage("stages time"){
+            steps{
+                echo "Stage $stage.displayName duration: $duration ms"                                               
+            }
+        }
     }     
 }
