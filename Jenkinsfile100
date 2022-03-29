@@ -29,7 +29,7 @@ pipeline{
         }
         stage("stages"){
             steps{
-                echo "steps ${BUILD_TIMESTAMP}"                                               
+                echo "steps ${printStageDurations()}"                                               
             }
         }
     }     
