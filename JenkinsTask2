@@ -23,9 +23,9 @@ pipeline {
                 echo 'deploying'
             }
         }
-        stage ('Build Sample_Projects_pos'){
+        stage ('Build Sample_Projects1'){
             steps {
-                build job: 'Sample_Projects_pos', parameters: [string(name: "Environment", value: "production")]
+                build job: 'Sample_Projects1', parameters: [string(name: "Environment", value: "production")]
             }
         }   
     }
