@@ -9,7 +9,7 @@ pipeline{
         }
         stage("stages"){
             steps{
-                echo "steps ${new Date()}"                                               
+                echo "steps ${BUILD_TIMESTAMP}"                                               
             }
         }
     }     
