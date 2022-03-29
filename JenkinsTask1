@@ -5,7 +5,7 @@ pipeline {
         stage('build') {
             steps {
                 echo 'building'
-                build job: "Sample_project2", parameters[string(name: "var", value: "${Build_NUMBER})]
+                echo 'print(os.environ['JOB_NAME'])'
             }
         }
         stage('test') {
