@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                bat 'Task.py ${env.JOB_NAME}'
+                echo 'Task.py ${env.JOB_NAME}'
             }
         }
         stage('test') {
