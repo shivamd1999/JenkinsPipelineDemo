@@ -9,7 +9,7 @@ pipeline{
         }
         stage("stages"){
             steps{
-                echo "steps ${currentBuild.durationString.minus(' and counting')}"                                               
+                echo "steps ${new Date()}"                                               
             }
         }
     }     
