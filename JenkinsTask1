@@ -24,7 +24,7 @@ pipeline {
         }
         stage('python') {
             steps {
-                bat 'lav.py'
+                bat 'Task.py'
             }
         }
     }
