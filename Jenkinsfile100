@@ -1,32 +1,30 @@
 pipeline{
     agent any
-        timestamps (){
-    
-        stages{
-            stage("Build number "){
-                steps{
-                    echo "The build number is ${env.BUILD_NUMBER}"                                              
-                }
+    options { timestamps ()}
+    stages{
+        stage("Build number "){
+            steps{
+                echo "The build number is ${env.BUILD_NUMBER}"                                              
             }
-            stage("Jobs Name"){
-                steps{
-                    echo "The Jobs name is ${env.JOB_NAME}"                                              
-                }
+        }
+        stage("Jobs Name"){
+            steps{
+                echo "The Jobs name is ${env.JOB_NAME}"                                              
             }
-            stage("Build URL"){
-                steps{
-                    echo "The Build URL is ${env.BUILD_URL}"                                               
-                }
+        }
+        stage("Build URL"){
+            steps{
+                echo "The Build URL is ${env.BUILD_URL}"                                               
             }
-            stage("Dates"){
-                steps{
-                    echo "The Updated date ${new Date()}"                                                
-                }
+        }
+        stage("Dates"){
+            steps{
+                echo "The Updated date ${new Date()}"                                                
             }
-            stage("Build Duration"){
-                steps{
-                    echo "The Build Duration is  ${currentBuild.durationString}"                                               
-                }
+        }
+        stage("Build Duration"){
+            steps{
+                echo "The Build Duration is  ${currentBuild.durationString}"                                               
             }
         }
     }     
