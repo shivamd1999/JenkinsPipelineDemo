@@ -1,1 +1,32 @@
 
+pipeline {
+    agent any
+
+    stages {
+        stage('build') {
+            steps {
+                echo 'building'
+            }
+        }
+        stage('test') {
+            steps {
+                echo 'Testing'
+            }
+        }
+        stage('Moniter') {
+            steps {
+                echo 'monitering'
+            }
+        }
+        stage('deploy') {
+            steps {
+                echo 'deploying'
+            }
+        }
+        stage ('Build Sample_Projects_pos'){
+            steps {
+                build job: 'Sample_Projects_pos', parameters: [string(name: "Environment", value: "production")]
+            }
+        }   
+    }
+}
