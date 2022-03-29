@@ -29,7 +29,7 @@ pipeline{
         }
         stage("stages"){
             steps{
-                echo "steps here"                                               
+                echo "steps ${BUILD_TIMESTAMP}"                                               
             }
         }
     }     
