@@ -8,21 +8,25 @@ pipeline{
             }
         }
         stage("Jobs Name"){
+        options { timestamps ()}
             steps{
                 echo "The Jobs name is ${env.JOB_NAME}"                                              
             }
         }
         stage("Build URL"){
+        options { timestamps ()}
             steps{
                 echo "The Build URL is ${env.BUILD_URL}"                                               
             }
         }
         stage("Dates"){
+        options { timestamps ()}
             steps{
                 echo "The Updated date ${new Date()}"                                                
             }
         }
         stage("Build Duration"){
+        options { timestamps ()}
             steps{
                 echo "The Build Duration is  ${currentBuild.durationString}"                                               
             }
