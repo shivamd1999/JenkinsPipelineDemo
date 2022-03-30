@@ -5,13 +5,13 @@ pipeline{
         stage("Build number "){
         options { timestamps ()}
             steps{
-                echo "The build number is ${env.BUILD_NUMBER}, ${start}"
+                echo "The build number is ${env.BUILD_NUMBER}"
             }
         }
         stage("Jobs Name"){
         options { timestamps ()}
             steps{
-                echo "The Jobs name is ${env.JOB_NAME},  ${currentBuild.durationString}"                                              
+                echo "The Jobs name is ${env.JOB_NAME},  ${currentBuild.durationString.minus('and counting')}"                                              
             }
         }
         stage("Build URL"){
