@@ -8,29 +8,5 @@ pipeline{
                 echo "The build number is ${env.BUILD_NUMBER}, ${currentBuild.durationString.minus('and counting')}"
             }
         }
-        stage("Jobs Name"){
-        options { timestamps ()}
-            steps{
-                echo "The Jobs name is ${env.JOB_NAME},  ${currentBuild.durationString.minus('and counting')}"                                              
-            }
-        }
-        stage("Build URL"){
-        options { timestamps ()}
-            steps{
-                echo "The Build URL is ${env.BUILD_URL}"                                               
-            }
-        }
-        stage("Dates"){
-        options { timestamps ()}
-            steps{
-                echo "The Updated date ${new Date()}"                                                
-            }
-        }
-        stage("Build Duration"){
-        options { timestamps ()}
-            steps{
-                echo "The Build Duration is  ${currentBuild.durationString}"                                               
-            }
-        }
     }     
 }
