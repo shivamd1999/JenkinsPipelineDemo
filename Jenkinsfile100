@@ -11,7 +11,7 @@ pipeline{
         stage("Jobs Name"){
         options { timestamps ()}
             steps{
-                echo "The Jobs name is ${env.JOB_NAME},  ${currentBuild.durationString"                                              
+                echo "The Jobs name is ${env.JOB_NAME},  ${currentBuild.durationString}"                                              
             }
         }
         stage("Build URL"){
