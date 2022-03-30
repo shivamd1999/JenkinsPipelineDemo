@@ -1,8 +1,9 @@
 pipeline{
     agent any
-    options { timestamps ()}
+    
     stages{
         stage("Build number "){
+        options { timestamps ()}
             steps{
                 echo "The build number is ${env.BUILD_NUMBER}"                                              
             }
