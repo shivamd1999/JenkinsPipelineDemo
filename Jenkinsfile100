@@ -5,7 +5,7 @@ pipeline{
         stage("Build number "){
         options { timestamps ()}
             steps{
-                echo "The build number is ${env.BUILD_NUMBER} ${env.BUILD_TIMESTAMP}"
+                echo "The build number is ${env.BUILD_NUMBER} ${env.BUILD_DURATION}"
             }
         }
         stage("Jobs Name"){
