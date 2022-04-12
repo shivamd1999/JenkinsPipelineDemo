@@ -27,6 +27,11 @@ pipeline {
             steps {
                 build job: 'Sample_project2', parameters: [string(name: "Environment", value: "production")]
             }
-        }   
+        }
+        stage ('Build Sample_project1'){
+            steps {
+                build job: 'Sample_project1', parameters: [string(name: "Environment", value: "production")]
+            }
+        } 
     }
 }
